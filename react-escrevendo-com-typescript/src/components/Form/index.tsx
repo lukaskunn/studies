@@ -1,0 +1,35 @@
+import React from "react";
+import Button from "../Button";
+// import { Container } from './styles';
+
+const Form: React.FC = () => {
+  return (
+    <form action="">
+      <div>
+        <label htmlFor="tarefa">Adicione o que você quer estudar: </label>
+        <input
+          type="text"
+          name="tarefa"
+          id="tarefa"
+          placeholder="O que você quer estudar?"
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="tempo">Tempo: </label>
+        <input
+          type="time"
+          step="1"
+          name="tempo"
+          id="tempo"
+          min="00:00:00"
+          max="01:30:00"
+          required
+        />
+      </div>
+      <Button />
+    </form>
+  );
+};
+
+export default Form;
