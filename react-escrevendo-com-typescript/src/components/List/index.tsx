@@ -1,5 +1,5 @@
 import React from "react";
-
+import Item from "./components/Item";
 import styles from "./styles.module.scss";
 
 const List: React.FC = () => {
@@ -21,11 +21,8 @@ const List: React.FC = () => {
     <aside className={styles.listaTarefas}>
       <h2>Estudos do dia</h2>
       <ul>
-        {tarefas.map((tarefa, index) => (
-          <li key={index} className={styles.item}>
-            <h3>{tarefa.tarefa}</h3>
-            <span>{tarefa.tempo}</span>
-          </li>
+        {tarefas.map((item, index) => (
+          <Item {...item} key={index} />
         ))}
       </ul>
     </aside>

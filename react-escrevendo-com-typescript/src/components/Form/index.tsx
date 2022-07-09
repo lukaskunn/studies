@@ -27,7 +27,7 @@ const Form: React.FC = () => {
           required
         />
       </div>
-      <Button />
+      <Button>Adicionar</Button>
     </form>
   );
 };

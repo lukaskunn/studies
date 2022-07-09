@@ -2,8 +2,12 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-const Button: React.FC = () => {
-  return <button className={styles.botao}>botão</button>;
+interface ButtonProps {
+  children?: React.ReactNode;
+}
+
+const Button: React.FC<ButtonProps> = (props) => {
+  return <button className={styles.botao}>{props.children}</button>;
 };
 
 export default Button;
