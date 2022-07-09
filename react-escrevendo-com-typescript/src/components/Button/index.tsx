@@ -1,9 +1,9 @@
 import React from "react";
 
-// import { Container } from './styles';
+import styles from "./styles.module.scss";
 
 const Button: React.FC = () => {
-  return <button>botão</button>;
+  return <button className={styles.botao}>botão</button>;
 };
 
 export default Button;

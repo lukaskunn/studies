@@ -1,6 +1,6 @@
 import React from "react";
 
-// import { Container } from './styles';
+import styles from "./styles.module.scss";
 
 const List: React.FC = () => {
   const tarefas = [
@@ -18,11 +18,11 @@ const List: React.FC = () => {
     },
   ];
   return (
-    <aside>
+    <aside className={styles.listaTarefas}>
       <h2>Estudos do dia</h2>
       <ul>
         {tarefas.map((tarefa, index) => (
-          <li key={index}>
+          <li key={index} className={styles.item}>
             <h3>{tarefa.tarefa}</h3>
             <span>{tarefa.tempo}</span>
           </li>
